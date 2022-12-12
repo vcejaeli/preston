@@ -1,11 +1,16 @@
 # preston(psc)
  for n423
 
- # web4
+ # web4 link:
  https://in-info-web4.informatics.iupui.edu/~vcejaeli/n423/preston/
 
+## note:
+I did get help from tutor and cousin on this, as well as lecture videos!
 
-use fname lname on sign up to see changes on about "our users"
+## note for website:
+- use fname lname on sign up to see changes on about "our users".
+- website should be resize friendly. 
+- imgs should load in properly.
 
 
 ## idea
@@ -35,3 +40,9 @@ the contact page offers a form and shows a nice teamwork image to go along with 
 account:
 the account page is where a user can come and login if they wish. 
 
+# comments:
+the JS keep getting me errors which is what I asked for help on, it wasn't too bad once I did get tutor help with that. 
+The web4 upload messed with the images a little bit (or maybe I just forgot how to do it), but the images should all load in now. 
+I did have to change the images on the JS slides to links in order for them to load on web4. 
+
+I believe that's it. Thanks! 
