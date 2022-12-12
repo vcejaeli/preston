@@ -48,6 +48,11 @@
     </div>
 </section>
 
+<section class="about" style="margin-bottom: 30px;">
+  <h2 class="ourTeamHeader" style="text-align:center" onmouseover="loadList()">Our Users</h2>
+    <div class="row" id="users" style="display: flex;justify-content: center;">
+    </div>
+</section>
 <section class="slides">
   <div class="slides__introtext">
       <h2>From your social media to us</h2>
@@ -90,23 +95,42 @@
 </section>
 
 <script>
-  let slideIndex = 0;
-  showSlides();
-  
-  function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    function loadList(){
+      let table = '<table border="1">';
+      table += `<tr><th>First Name</th><th>Last Name</th></tr>`;
+      userList.forEach((user, index) => {
+        table = table + `<tr>`;
+        table = table + `<td> ${user.fName} </td>`;
+        table = table + `<td> ${user.lName} </td>`;
+        table = table + `<td> <button class="about__button" onclick="deleteUser(${user.id})">Delete</button> </td>`;
+        table += `</tr>`;
+      });
+      table += "</table>";
+      document.getElementById("users").innerHTML = table;
     }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-  }
-  </script>
+
+    function deleteUser(idToRemove){
+      userList = userList.filter(user => user.id != idToRemove);
+      localStorage.setItem('userList',JSON.stringify(userList));
+      loadList();
+    }
+    </script>

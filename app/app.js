@@ -21,7 +21,13 @@ function initListeners() {
     route();
 }
 
+var userList = localStorage.getItem('userList');
 $(document).ready(function() {
     // navToPage("home");
     initListeners();
+    if(userList == null){
+        localStorage.setItem('userList',JSON.stringify([]));
+        userList = localStorage.getItem('userList');
+    }
+    userList = JSON.parse(userList);
 });
