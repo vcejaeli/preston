@@ -1,6 +1,13 @@
 # preston(psc)
  for n423
 
+ # web4
+ https://in-info-web4.informatics.iupui.edu/~vcejaeli/n423/preston/
+
+
+use fname lname on sing up to see changes on about "our users"
+
+
 ## idea
 This is a website for a fictitious gym/sports complex facility where people can sign up for memberships. 
 The website has a landing, membership, available, amenities, about, contact, and account page. 
