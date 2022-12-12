@@ -1,0 +1,118 @@
+.home {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../assets/images/spo1.jpg), $blackOverlayLight;
+    background-blend-mode: overlay;
+    min-height: calc(100vh);
+    margin: 0 auto;
+    display: flex;  
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__header {
+        text-transform: uppercase;
+        color: #d1c799;
+        max-width: 500px;
+        height: auto;
+
+        h1 {
+            @include big_header;
+        }
+        h2 {
+            @include medium_header;
+        }
+    }
+    &__cta {
+    }
+    &__button {
+        @include btn_reg();
+        @include medium_paragraph;
+    }
+    &__button:hover {
+        @include btn_reg_fx();
+        @include medium_paragraph;
+    }
+}
+
+.homeHighlight {
+    min-height: calc(40vh);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__wrap {
+        width: calc(90%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    &__header {
+        @include small_header;
+    }
+    &__deals {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: calc(100%);
+        height: auto;
+    }
+    &__dealwrap {
+        max-width: 500px;
+        padding: 20px 20px;
+    }
+    &__dealtext {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        @include medium_paragraph;
+        width: calc(100%);
+
+        h3 {
+            @include small_header;
+        }
+    }
+    &__dealcta {
+        display: inline-block;
+        @include btn_reg;
+    }
+    &__dealcta:hover {
+        @include btn_reg_fx;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .home {
+        &__header {
+            // background: purple;
+            max-width: 260px;
+            h1 {
+                line-height: 60px;
+                font-size: 50px;
+            }
+            h2 {
+                font-size: 15px;
+            }
+        }
+        &__button:hover {
+            //
+        }
+    }
+    .homeHighlight {
+        // background-color: magenta;
+        &__deals {
+            // background-color: lime;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+        }
+        &__dealwrap {
+            // background-color: aquamarine;
+            margin: 0 auto;
+        }
+    }
+}

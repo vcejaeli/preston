@@ -1,0 +1,191 @@
+.green {
+  background: green;
+}
+.red {
+  background: red;
+}
+
+.availableSec {
+  padding: 20px;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-image: url(../assets/images/availability/horizontal-footballPitch.jpg),
+  //   $blackOverlay;
+  // background-blend-mode: overlay;
+background-color: $prestonGray;
+  min-height: calc(100vh);
+  width: calc(100%);
+  color: $prestonBlack;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .availability {
+    height: calc(100%);
+    width: calc(100vw);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    // background-color: peachpuff;
+
+    h2 {
+      @include medium_header;
+    }
+    p {
+      @include small_paragraph;
+    }
+    &__columwrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 90%;
+      height: auto;
+      //   background-color: #21f364;
+    }
+    &__columns {
+      width: 33.3%;
+      padding: 8px;
+      //   background-color: orange;
+    }
+
+    .available {
+      list-style-type: none;
+      //   border: 1px solid #eee;
+      margin: 0;
+      padding: 0;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+    }
+    h3 {
+        @include small_header;
+      }
+
+    .available:hover {
+    //   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .available .header {
+      @include small_header;
+      background-color: $prestonRed;
+      color: $prestonWhite;
+      // font-size: 25px;
+    }
+
+    .available li {
+      //   border-bottom: 1px solid #eee;
+      padding: 20px;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    .available .grey {
+      background-color: #eee;
+      font-size: 20px;
+    }
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $prestonRed;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background-color: #21f364;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #21f364;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+  @media only screen and (max-width: 800px) {
+    .availability {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+    //   background-color: rgba(232, 13, 50, 0.337);
+
+      .header {
+        width: calc(90vw);
+      }
+      &__columwrap {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        // background-color: rgba(238, 121, 19, 0.487);
+      }
+      &__columns {
+        width: calc(100%);
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        // background-color: lightcoral;
+      }
+      .available {
+        width: calc(100vw);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        // background-color: plum;
+      }
+    }
+  }
+}

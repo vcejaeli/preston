@@ -1,0 +1,73 @@
+.nav {
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 80px;
+  padding: 2px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $prestonWhite;
+  // @include bkg_preston_white;
+
+  a {
+    // @include txt_preston_blue;
+    color: $prestonBlue;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+  }
+  &__links {
+    list-style: none;
+  }
+  &__links li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  &__links li a {
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+  }
+  &__links a:hover {
+    // @include txt_preston_red;
+    color: $prestonRed;
+  }
+  &__logo {
+    cursor: pointer;
+    width: auto;
+    height: 65px;
+    transition: 0.6s ease-in-out;
+  }
+  &__logo:hover {
+    transform: rotate(360deg);
+  }
+
+  &__accountBtn {
+    @include btn_reg;
+    a {
+        color: $prestonWhite;
+    }
+  }
+  &__accountBtn:hover {
+    @include btn_reg_fx;
+    a {
+        color: $prestonBlue;
+    }
+  }
+}
+
+// add query later
+@media (max-width: 800px) {
+  .nav {
+    &__logo {
+      height: 25px;
+    }
+    &__links li {
+      display: inline-block;
+      padding: 0px 0px;
+      padding: 0px 0px;
+    }
+    &__links li a {
+      font-weight: 600;
+    }
+  }
+}

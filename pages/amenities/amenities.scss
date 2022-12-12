@@ -1,0 +1,144 @@
+.amenities {
+    min-height: calc(100vh);
+    max-width: 100%;
+    // margin-bottom: 100px;
+    background-color: $prestonGray;
+    // background-image: url(../assets/images/spo1flip.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__main {
+        // dont forget to add max to the whole canvas
+        margin: 0 auto;
+        padding: 20px;
+        height: auto;
+        max-width: 90%;
+        // background: rgba(136, 59, 72, 0.65);
+    }
+    &__titleCont {
+        margin: 0 auto;
+        // background: chartreuse;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+    &__title {
+        @include medium_header;
+    }
+    &__post {
+        height: 200px;
+        max-width: 1000px;
+        margin: 0 auto;
+        align-items: center;
+        border: none;
+        margin-bottom: 50px;
+        // background: rgba(100, 148, 237, 0.452);
+    }
+    &__wrap {
+        height: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+    &__img {
+        height: 100%;
+        width: 600px;
+        border: none;
+        cursor: pointer;
+        margin-right: 20px;
+        // background: rgba(250, 204, 18, 0.411);
+    }
+    &__headerDesc {
+        padding-top: 5px;
+        height: 100%;
+        max-width: 600px;
+        // text-overflow: auto;
+        overflow: auto;
+        color: #000;
+        // background: rgba(51, 255, 0, 0.507);
+
+        h1 {
+            @include small_header;
+        }
+        p {
+           @include medium_paragraph;
+        }
+    }
+
+    &--imgOne {
+        background-image: url(../assets/images/horizontal-weightsInSun.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &--imgTwo {
+        background-image: url(../assets/images/scom4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &--imgThree {
+        background-image: url(../assets/images/amenities/horizontal-runOnCanal.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &--imgFour {
+        background-image: url(../assets/images/about/horizontal-bikerAheadOfOthers.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &--imgFive {
+        background-image: url(../assets/images/bballgym.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &--imgSix {
+        background-image: url(../assets/images/footballsoccerplayers.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &--imgSeven {
+        background-image: url(../assets/images/boxingroom.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .amenities {
+        background: #fff;
+
+        &__main {
+            background: #fff;
+        }
+        &__post {
+            margin-bottom: auto;
+            padding-bottom: 100px;
+        }
+        &__wrap {
+            
+        }
+        &__headerDesc {
+
+            width: 400px;
+            // background: yellow;
+
+            h1 {
+                text-overflow: auto;
+                font-size: 20px;
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+}

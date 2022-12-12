@@ -1,0 +1,112 @@
+<section class="about">
+    <div class="about__introsection">
+        <h1>About Us Page</h1>
+        <p>Some text about who we are and what we do.</p>
+        <p>Resize the browser window to see that this page is responsive by the way.</p>
+    </div>
+      
+      <h2 class="ourTeamHeader" style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="/assets/images/staff/trainer1.jpg" alt="Jane" style="width:100%">
+            <div class="container">
+              <h3>Jane Doe</h2>
+              <p class="title">Trainer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>jane@example.com</p>
+              <p><button class="about__button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/assets/images/staff/trainer2.png" alt="Mike" style="width:100%">
+            <div class="container">
+              <h3>Mike Ross</h3>
+              <p class="title">Trainer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>mike@example.com</p>
+              <p><button class="about__button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/assets/images/staff/trainer3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h3>John Doe</h3>
+              <p class="title">Trainer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>john@example.com</p>
+              <p><button class="about__button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<section class="slides">
+    <div class="slides__introtext">
+        <h2>From your social media to us</h2>
+        <p>tag us for a chance to be featured!</p>
+
+            <ul class="slides_socialMediaIcons">
+                <li> <a class="slides__youtube" href="https://www.youtube.com/" target="_blank" rel="noreferrer noopener"> <i class="fab fa-youtube"> </i> </a> </li>
+                <li> <a class="slides__instagram" href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener"> <i class="fab fa-instagram"></i> </a> </li>
+                <li> <a class="slides__pinterest" href="https://www.pinterest.com/" target="_blank" rel="noreferrer noopener"> <i class="fab fa-pinterest"></i> </a> </li>
+            </ul>
+    </div>
+  
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="/assets/images/horizontal-bikersPedalingParallelinRoadNearWoods.jpg" style="width: 100%" />
+      <div class="text">@username</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="/assets/images/amenities/horizontal-runOnCanal.jpg" style="width: 100%" />
+      <div class="text">@username</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="/assets/images/horizontal-footballPitchCorner.jpg" style="width: 100%" />
+      <div class="text">@username</div>
+    </div>
+  </div>
+  <br />
+
+  <div style="text-align: center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>

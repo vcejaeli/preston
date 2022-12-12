@@ -1,0 +1,116 @@
+.login {
+  // padding: 50px;
+    height: calc(100vh);
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $prestonGray;
+    
+    &__content {
+        height: auto;
+        width: calc(70%);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // background: #fff;
+    }
+    ::placeholder {     
+        color: $prestonBlack;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {   
+        color: $prestonBlack;
+    }
+
+    // login area
+    &__logHere {
+        height: auto;
+        width: calc(100%);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        // background: lightblue;
+    }
+    &__logHeader {
+        @include medium_header;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      // background-color: lime;
+    }
+    input {
+        border: none;
+        border-bottom: 1px solid $prestonBlack;
+        background: none;
+        color: $prestonBlack;
+        outline: none;
+        margin-bottom: 51.5px;
+    }
+    &__buttonL {
+        @include btn_reg;
+    }
+    &__buttonL:hover {
+        @include btn_reg_fx;
+    }
+
+    // sign up area
+    &__signUp {
+        height: auto;
+        width: calc(100%);
+        // background: lightcoral;
+    }
+    &__signHeader {
+        color: $prestonBlack;
+    }
+    &--p {
+        @include medium_paragraph;
+    }
+    &--h1 {
+        @include medium_header;
+    }
+    &__buttonR {
+        @include btn_reg;
+    }
+    &__buttonR:hover {
+      @include btn_reg_fx;
+  }
+}
+
+//media query
+@media only screen and (max-width: 800px) {
+    .login {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        // background-color: purple;
+
+        &__content {
+            // margin-top: 87px;
+            width: 100%;
+            height: auto;
+            display: inline;
+            // background: cornsilk;
+        }
+        &__logHere {
+            margin-bottom: 60px;
+        }
+        &__input {
+            margin-bottom: 50px;
+        }
+        &__buttonL, &__buttonR {
+            // background-color: lime;
+            width: 100%;
+        }
+    }
+}

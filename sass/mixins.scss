@@ -1,0 +1,227 @@
+/*
+// colors
+//background
+// @mixin bkg_preston_red {
+//   background-color: #cf4037;
+// }
+// @mixin bkg_preston_blue {
+//   background-color: #2d509f;
+// }
+// @mixin bkg_preston_yellow {
+//   background-color: #fde62f;
+// }
+// @mixin bkg_preston_white {
+//   background-color: #ffffff;
+// }
+// @mixin bkg_preston_gray {
+//   background-color: #e3e3e3;
+// }
+// @mixin bkg_preston_black {
+//   background-color: #010b13;
+// }
+
+// text colors
+// @mixin txt_preston_red {
+//   color: #cf4037;
+// }
+// @mixin txt_preston_blue {
+//   color: #2d509f;
+// }
+// @mixin txt_preston_yellow {
+//   color: #fde62f;
+// }
+// @mixin txt_preston_white {
+//   color: #ffffff;
+// }
+// @mixin txt_preston_gray {
+//   color: #e3e3e3;
+// }
+// @mixin txt_preston_black {
+//   color: #010b13;
+// }
+*/
+
+// text sizes
+// headings
+@mixin big_header {
+  font-size: 63px;
+  font-weight: bold;
+  color: $prestonBlue;
+  text-transform: uppercase;
+  // color: #2d509f;
+}
+@mixin medium_header {
+  font-size: 30px;
+  font-weight: bold;
+  color: $prestonRed;
+  text-transform: uppercase;
+  // color: #CF4037;
+}
+@mixin small_header {
+  font-size: 20px;
+  font-weight: bold;
+  color: $prestonRed;
+  text-transform: uppercase;
+  // color: #CF4037;
+}
+
+// paragraphs
+@mixin big_paragraph {
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 0.6cm;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0 0 24px;
+  text-overflow: auto;
+  // color: $prestonBlack;
+}
+@mixin medium_paragraph {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 0.6cm;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0 0 24px;
+  height: auto;
+  text-overflow: auto;
+  // color: $prestonBlack;
+}
+@mixin small_paragraph {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 0.6cm;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0 0 24px;
+  text-overflow: auto;
+  // color: $prestonBlack;
+}
+
+// buttons
+@mixin btn_reg(
+  $btnPadding: 9px 25px,
+  $btnRadius: 50px,
+  $btnBorder: none,
+  $btnTransition: all 0.3s ease 0s,
+  $btnCursor: pointer,
+  $btnTextColor: $prestonYellow,
+  $btnBackgroundColor: $prestonBlue,
+  $btnOutline: none,
+  $btnTextTransform: capitalize,
+  $btnLetterSpacing: 2px
+) {
+  padding: $btnPadding;
+  border-radius: $btnRadius;
+  border: $btnBorder;
+  transition: $btnTransition;
+  cursor: $btnCursor;
+  color: $prestonYellow;
+  background-color: $prestonBlue;
+  outline: $btnOutline;
+  letter-spacing: $btnLetterSpacing;
+  text-transform: capitalize;
+}
+@mixin btn_reg_fx(
+  $btnRadiusFx: 4px,
+  $btnBackgroundColorFx: $prestonYellow,
+  $btnTextColor: $prestonBlue
+) {
+  border-radius: $btnRadiusFx;
+  background-color: $prestonYellow;
+  color: $prestonBlue;
+}
+
+//sales
+@mixin btn_memberpricing(
+  $btnPadding: 15px 30px,
+  $btnRadius: 5px,
+  $btnBorder: none,
+  $btnTransition: all 0.3s ease 0s,
+  $btnCursor: pointer,
+  $btnTextColor: $prestonWhite,
+  $btnBackgroundColor: $prestonRed,
+  $btnOutline: none,
+  $btnTextTransform: capitalize,
+  $btnLetterSpacing: 2px
+) {
+  padding: $btnPadding;
+  border-radius: $btnRadius;
+  border: $btnBorder;
+  transition: $btnTransition;
+  cursor: $btnCursor;
+  color: $prestonWhite;
+  background-color: $prestonRed;
+  outline: $btnOutline;
+  letter-spacing: $btnLetterSpacing;
+  text-transform: capitalize;
+}
+@mixin btn_memberpricing_fx(
+  $btnRadiusFx: 4px,
+  $btnBackgroundColorFx: $prestonWhite,
+  $btnTextColor: $prestonRed
+) {
+  border-radius: $btnRadiusFx;
+  background-color: $prestonWhite;
+  color: $prestonRed;
+}
+
+// box-shadow: 0px 8px 30px 8px rgba(0,0,0,.2);
+// cursor: pointer;
+// transition: all 0.3s ease-in-out 0s;
+
+/*
+// &__button {
+//   border: 3px solid #d1c799;
+//   border-radius: 20px;
+//   background: none;
+//   padding: 10px 20px;
+//   color: #fff;
+//   font-weight: 800;
+//   font-size: 15px;
+//   transition: 1s;
+// }
+// &__button:hover {
+//   border-radius: 5px;
+//   font-size: 20px;
+//   margin-left: 150px;
+//   margin-right: 0px;
+// }
+*/
+
+// @mixin backImgProperties($backImgPos: center, $backImgSize: cover, $backImgRep: no-repeat) {
+//   background-position: $backImgPos;
+//   background-size: $backImgSize;
+//   background-repeat: $backImgRep;
+// }
+
+// @mixin roundButton($btnPadding: 9px 25px, $btnRadius: 50px, $btnBorder: none, $btnTransition: all 0.3s ease 0s, $btnCursor: pointer, $btnText: #fff, $btnColor: $indiaGreen) {
+//   padding: $btnPadding;
+//   border-radius: $btnRadius;
+//   border: $btnBorder;
+//   transition: $btnTransition;
+//   cursor: $btnCursor;
+//   color: $btnText;
+//   background-color: $btnColor;
+// }
+// @mixin buttonEffect($btnFxRadius: 4px, $btnFxColor: $indiaOrange) {
+//   border-radius: $btnFxRadius;
+//   background-color: $btnFxColor;
+// }
+
+// scss
+// button {
+//   @include roundButton(10px 10px, 15px);
+// }
+// button:hover {
+//   @include buttonEffect();
+// }
+// button:focus {
+//   outline: none;
+// }
+
+// html
+// <a class="cta" href="#"><button>Order Online</button></a>
