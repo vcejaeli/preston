@@ -992,6 +992,30 @@ p {
   margin-bottom: 16px;
   padding: 0 8px;
 }
+.about .trainer1 {
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/staff/trainer1.jpg);
+}
+.about .trainer2 {
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/staff/trainer2.png);
+}
+.about .trainer3 {
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/staff/trainer3.jpg);
+}
 .about .card {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -1288,6 +1312,16 @@ input[type=submit]:hover {
   width: 50%;
   margin-top: 6px;
   padding: 20px;
+}
+
+.teamImg {
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/images/memberships/horizontal-teamSportHands.jpg);
+  background-color: peachpuff;
 }
 
 /* Clear floats after the columns */
