@@ -5,7 +5,7 @@
  https://in-info-web4.informatics.iupui.edu/~vcejaeli/n423/preston/
 
 
-use fname lname on sing up to see changes on about "our users"
+use fname lname on sign up to see changes on about "our users"
 
 
 ## idea
